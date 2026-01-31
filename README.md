@@ -1,98 +1,90 @@
 <div align="center">
 
-  <h1>📊 Ethiopia Financial Inclusion Forecasting</h1>
+  <h1>📈 Ethiopia Financial Inclusion Forecasting</h1>
 
   <p>
-    <strong>10 Academy – Artificial Intelligence Mastery</strong><br>
-    <strong>Week 10 Challenge</strong> • Forecasting Ethiopia's Digital Financial Transformation
+    <strong>My Week 10 Challenge Project – 10 Academy AI Mastery</strong><br>
+    Forecasting Ethiopia's Digital Financial Transformation using Time Series Methods
   </p>
 
   <p>
     <img src="https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white" alt="Python" />
     <img src="https://img.shields.io/badge/Pandas-2.x-150458?logo=pandas&logoColor=white" alt="Pandas" />
     <img src="https://img.shields.io/badge/Streamlit-1.x-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit" />
+    <img src="https://img.shields.io/badge/Tests-Passing-brightgreen" alt="Tests Passing" />
     <img src="https://img.shields.io/badge/Status-Interim%20Complete-green" alt="Status" />
   </p>
 
-  <p><strong>Date:</strong> 28 Jan 2026 – 03 Feb 2026<br>
-  <strong>Location:</strong> Addis Ababa, Ethiopia<br>
-  <strong>Author:</strong> Bereket Feleke</p>
+  <p><strong>Author:</strong> Bereket Feleke</p>
+  <p><strong>Location:</strong> Addis Ababa, Ethiopia</p>
+  <p><strong>Challenge Dates:</strong> 28 Jan 2026 – 03 Feb 2026</p>
 
 </div>
 
-## 🎯 Business Need & Challenge Overview
+## 🎯 Project Overview – Why I Built This
 
-You are a Data Scientist at **Selam Analytics**, a fintech consulting firm specializing in emerging markets. A consortium (development finance institutions, mobile money operators, **National Bank of Ethiopia**) has engaged you to build a **financial inclusion forecasting system**.
+I am a Data Scientist participating in the **10 Academy Week 10 Challenge**.  
+I built this forecasting system to answer real questions from a consortium (development finance institutions, mobile money operators, **National Bank of Ethiopia**):
 
-Ethiopia is undergoing rapid digital transformation:
-- **Telebirr**: >54 million users since 2021 launch
-- **M-Pesa Ethiopia**: >10 million users since 2023
-- Interoperable P2P digital transfers now **surpass ATM cash withdrawals** for the first time
-
-Yet the **2024 Global Findex** shows only **49%** of adults (15+) have a financial account — just **+3pp** since 2021.
-
-The consortium wants answers to:
 - What drives financial inclusion in Ethiopia?
-- How do events (product launches, policy changes, infrastructure investments) affect outcomes?
+- How do major events (product launches like Telebirr/M-Pesa, policies like NDPS, infrastructure investments) impact access and usage?
 - How did rates change in 2025, and what will 2026–2027 look like?
 
-**Core indicators** (World Bank Global Findex definitions):
-1. **Access** — Account Ownership Rate (% adults with bank or mobile money account)
-2. **Usage** — Digital Payment Adoption Rate (% adults making/receiving digital payments)
+Despite rapid growth (Telebirr >54M users since 2021, M-Pesa >10M since 2023, P2P transfers surpassing ATM withdrawals), the **2024 Global Findex** shows only **49%** account ownership (+3pp since 2021) — progress is slowing.  
+My goal: build a reproducible system to forecast **Access** (account ownership) and **Usage** (digital payments) for 2025–2027.
 
-## 📈 Ethiopia's Historical Trajectory (Global Findex)
+## 📊 Ethiopia's Historical Trajectory (Global Findex)
 
 | Year  | Account Ownership | Change   | Notes                          |
 |-------|-------------------|----------|--------------------------------|
 | 2011  | 14%               | —        | Baseline                       |
-| 2014  | 22%               | +8pp     |                                |
-| 2017  | 35%               | +13pp    | Strong growth                  |
+| 2014  | 22%               | +8pp     | Early growth                   |
+| 2017  | 35%               | +13pp    | Strong acceleration            |
 | 2021  | 46%               | +11pp    | Telebirr launch impact         |
-| 2024  | 49%               | +3pp     | Slowdown despite mobile growth |
+| 2024  | 49%               | +3pp     | Noticeable slowdown            |
 
-**2024 Usage indicators**:
+**2024 Usage highlights**:
 - Mobile money account ownership: **9.45%**
-- Made/received digital payment: **~21–35%**
-- Used account to receive wages: **~15%**
+- Digital payments (made/received): **~21–35%**
+- Wages received via account: **~15%**
 
-## 🚀 Project Deliverables & Progress
+## 🛠️ What I Delivered in This Repo
 
-| Task | Description                                      | Status     | Notebook / Deliverable                     |
+| Task | What I Did                                       | Status     | Notebook / Output                          |
 |------|--------------------------------------------------|------------|--------------------------------------------|
-| 1    | Data exploration & enrichment (Findex 2025, NDPS, IPS) | ✅ Done     | `notebooks/task1_enrichment.ipynb`         |
-| 2    | Exploratory Data Analysis (trends, gaps, correlations) | ✅ Done     | `notebooks/task2_eda.ipynb` + insights     |
-| 3    | Event Impact Modeling (association matrix)       | In Progress| `notebooks/task3_impact_modeling.ipynb`    |
-| 4    | Forecasting Access & Usage 2025–2027             | —          | —                                          |
-| 5    | Interactive Streamlit Dashboard                  | —          | `dashboard/app.py`                         |
+| 1    | Loaded, explored & enriched data (Findex 2025, NDPS/IPS 2025, penetration metrics) | ✅ Done     | `task1_enrichment.ipynb` + enriched CSV    |
+| 2    | EDA: trends, gender gaps, event timeline, correlations, 6 key insights | ✅ Done     | `task2_eda.ipynb` + figures + insights.md  |
+| 3    | Event impact modeling (association matrix, magnitude/lag) | In Progress| `task3_impact_modeling.ipynb`              |
+| 4    | Forecasting Access & Usage 2025–2027 (baseline + scenarios) | —          | —                                          |
+| 5    | Interactive Streamlit dashboard                  | —          | `dashboard/app.py` (planned)               |
 
-**Unit Tests** — 100% pass (data loading, forecasting, pivot handling)  
-**CI/CD** — GitHub Actions workflow (`unittests.yml`) running on push/PR
+**Unit Tests** → 11/11 passing (data loading, forecasting, pivot handling)  
+**CI** → GitHub Actions auto-runs tests on push/PR
 
-## 🛠️ Project Structure
-
+## 📁 Repository Structure
 ethiopia-financial-inclusion-forecast/
 ├── .github/workflows/         # CI: unittests.yml
 ├── data/
 │   ├── raw/                   # Starter .xlsx + converted .csv
-│   └── processed/             # Enriched CSV (Task 1)
+│   └── processed/             # My enriched CSV
 ├── notebooks/
-│   ├── task1_enrichment.ipynb      # Load, explore, enrich
-│   ├── task2_eda.ipynb             # Visuals, gaps, insights
-│   └── task3_impact_modeling.ipynb # Event matrix (WIP)
+│   ├── task1_enrichment.ipynb      # Data prep & 2025 enrichment
+│   ├── task2_eda.ipynb             # Visuals & insights
+│   └── task3_impact_modeling.ipynb # Event matrix (in progress)
 ├── reports/
-│   ├── figures/               # All plots (trajectories, heatmaps, etc.)
-│   └── key_insights.md        # 6+ documented insights
+│   ├── figures/               # Plots (trajectories, heatmaps, timeline)
+│   └── key_insights.md        # My 6 documented insights
 ├── tests/                     # Pytest files
 │   ├── test_data_loading.py
 │   └── test_forecasting.py
-├── dashboard/                 # Streamlit app (upcoming)
+├── dashboard/                 # Streamlit app (coming soon)
 ├── src/                       # Reusable code (future)
 ├── requirements.txt
-├── README.md
-└── data_enrichment_log.md
-text## ⚡ Quick Start
+├── README.md                  # This file
+└── data_enrichment_log.md     # My enrichment notes
+text## ⚡ How to Run My Project
 
-1. Clone the repo:
+1. Clone my repo:
    ```bash
    git clone https://github.com/bekonad/ethiopia-financial-inclusion-forecast.git
    cd ethiopia-financial-inclusion-forecast
@@ -101,30 +93,29 @@ Create & activate virtual environment (Windows):PowerShellpython -m venv .venv
 .\.venv\Scripts\Activate.ps1
 Install dependencies:PowerShellpython -m pip install --upgrade pip
 pip install -r requirements.txt
-Explore notebooks:PowerShelljupyter notebook notebooks/
+Explore my notebooks:PowerShelljupyter notebook notebooks/
 Run unit tests:PowerShellpytest -v
-Run dashboard (when ready):PowerShellstreamlit run dashboard/app.py
+(Future) Launch dashboard:PowerShellstreamlit run dashboard/app.py
 
-📊 Key Insights (from Task 2 EDA)
+📌 My Key Insights (from Task 2 EDA)
 
-Growth slowdown — Account ownership +3pp only 2021–2024 despite mobile money surge
-Gender gap persists — Women 42% vs Men 57% in 2024 (~15pp unchanged)
-Active usage low — Mobile money registered ~19.4%, but active ~15% (big gap)
-Digital payments lag — Only 21% adoption (P2P dominant, merchant acceptance weak)
-Infrastructure leads — Mobile connections 68.4% & internet 21.7% correlate with access
-Policy momentum — NDPS 2026-2030 & IPS launch (Dec 2025) expected to drive high usage boost
+Growth is slowing — Account ownership only +3pp (2021–2024) despite mobile money surge
+Gender gap remains stubborn — Women 42% vs Men 57% in 2024 (~15pp gap unchanged)
+Active usage is the bottleneck — Mobile money registered ~19.4%, but active ~15%
+Digital payments lag behind access — Only 21% adoption (P2P dominant, merchant weak)
+Infrastructure is a leading driver — Mobile connections 68.4% & internet 21.7% correlate strongly
+Recent policies matter — NDPS 2026-2030 & IPS/Ethiopay (Dec 2025) expected to drive high usage boost
 
 Full details → reports/key_insights.md
-🛠️ Tools & Tech Stack
+🛠️ Tech Stack I Used
 
-Python 3.10+
-Data: Pandas, NumPy
+Language: Python 3.10+
+Core: Pandas, NumPy
 Visualization: Matplotlib, Seaborn, Plotly
-Modeling: Statsmodels (trend regression)
-Dashboard: Streamlit
-Testing: pytest
-CI/CD: GitHub Actions
+Modeling: Statsmodels
+Dashboard: Streamlit (in progress)
+Testing: pytest + GitHub Actions CI
 
 📄 License
-MIT License (unless otherwise specified by 10 Academy)
+MIT License (unless restricted by 10 Academy rules)
 Last updated: January 31, 2026
