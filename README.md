@@ -1,112 +1,130 @@
-# Ethiopia Financial Inclusion Forecasting
+<div align="center">
 
-**10 Academy – Artificial Intelligence Mastery**  
-**Week 10 Challenge**  
-**Forecasting Financial Inclusion in Ethiopia**  
-Build a forecasting system that tracks Ethiopia's digital financial transformation using time series methods.
+  <h1>📊 Ethiopia Financial Inclusion Forecasting</h1>
 
-**Date:** 28 Jan 2026 – 03 Feb 2026  
-**Prepared by:** Bereket Feleke 
-**Location:** Addis Ababa, Ethiopia
+  <p>
+    <strong>10 Academy – Artificial Intelligence Mastery</strong><br>
+    <strong>Week 10 Challenge</strong> • Forecasting Ethiopia's Digital Financial Transformation
+  </p>
 
-## Overview & Business Need
+  <p>
+    <img src="https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white" alt="Python" />
+    <img src="https://img.shields.io/badge/Pandas-2.x-150458?logo=pandas&logoColor=white" alt="Pandas" />
+    <img src="https://img.shields.io/badge/Streamlit-1.x-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit" />
+    <img src="https://img.shields.io/badge/Status-Interim%20Complete-green" alt="Status" />
+  </p>
 
-Ethiopia is experiencing rapid digital financial growth:  
-- Telebirr: >54 million users since 2021 launch  
-- M-Pesa Ethiopia: >10 million users since 2023  
-- Interoperable P2P digital transfers now surpass ATM cash withdrawals  
+  <p><strong>Date:</strong> 28 Jan 2026 – 03 Feb 2026<br>
+  <strong>Location:</strong> Addis Ababa, Ethiopia<br>
+  <strong>Author:</strong> Bereket Feleke</p>
 
-Yet the **2024 Global Findex** shows only **49%** of adults (15+) have a financial account (+3pp since 2021) — progress is slowing despite infrastructure and product launches.
+</div>
 
-A consortium (development finance institutions, mobile money operators, National Bank of Ethiopia) engaged **Selam Analytics** to answer:  
-- What drives financial inclusion in Ethiopia?  
-- How do events (product launches, policy changes, infrastructure investments) affect inclusion outcomes?  
+## 🎯 Business Need & Challenge Overview
+
+You are a Data Scientist at **Selam Analytics**, a fintech consulting firm specializing in emerging markets. A consortium (development finance institutions, mobile money operators, **National Bank of Ethiopia**) has engaged you to build a **financial inclusion forecasting system**.
+
+Ethiopia is undergoing rapid digital transformation:
+- **Telebirr**: >54 million users since 2021 launch
+- **M-Pesa Ethiopia**: >10 million users since 2023
+- Interoperable P2P digital transfers now **surpass ATM cash withdrawals** for the first time
+
+Yet the **2024 Global Findex** shows only **49%** of adults (15+) have a financial account — just **+3pp** since 2021.
+
+The consortium wants answers to:
+- What drives financial inclusion in Ethiopia?
+- How do events (product launches, policy changes, infrastructure investments) affect outcomes?
 - How did rates change in 2025, and what will 2026–2027 look like?
 
-**Core indicators** (World Bank Global Findex definitions):  
-1. **Access** – Account Ownership Rate (% adults with bank/mobile money account)  
-2. **Usage** – Digital Payment Adoption Rate (% adults making/receiving digital payments)
+**Core indicators** (World Bank Global Findex definitions):
+1. **Access** — Account Ownership Rate (% adults with bank or mobile money account)
+2. **Usage** — Digital Payment Adoption Rate (% adults making/receiving digital payments)
 
-## Global Findex Trajectory (Ethiopia)
+## 📈 Ethiopia's Historical Trajectory (Global Findex)
 
-| Year  | Account Ownership | Change  |
-|-------|-------------------|---------|
-| 2011  | 14%               | —       |
-| 2014  | 22%               | +8pp    |
-| 2017  | 35%               | +13pp   |
-| 2021  | 46%               | +11pp   |
-| 2024  | 49%               | +3pp    |
+| Year  | Account Ownership | Change   | Notes                          |
+|-------|-------------------|----------|--------------------------------|
+| 2011  | 14%               | —        | Baseline                       |
+| 2014  | 22%               | +8pp     |                                |
+| 2017  | 35%               | +13pp    | Strong growth                  |
+| 2021  | 46%               | +11pp    | Telebirr launch impact         |
+| 2024  | 49%               | +3pp     | Slowdown despite mobile growth |
 
 **2024 Usage indicators**:
-- Mobile money account ownership: 9.45%
-- Made/received digital payment: ~21–35%
-- Used account to receive wages: ~15%
+- Mobile money account ownership: **9.45%**
+- Made/received digital payment: **~21–35%**
+- Used account to receive wages: **~15%**
 
-## Project Deliverables
+## 🚀 Project Deliverables & Progress
 
-1. Enrich and understand the unified financial inclusion dataset  
-2. Perform exploratory data analysis (trends, gaps, correlations)  
-3. Model event impacts (association matrix, magnitude/lag estimates)  
-4. Forecast Access & Usage for 2025–2027 (baseline + scenarios)  
-5. Build interactive Streamlit dashboard  
+| Task | Description                                      | Status     | Notebook / Deliverable                     |
+|------|--------------------------------------------------|------------|--------------------------------------------|
+| 1    | Data exploration & enrichment (Findex 2025, NDPS, IPS) | ✅ Done     | `notebooks/task1_enrichment.ipynb`         |
+| 2    | Exploratory Data Analysis (trends, gaps, correlations) | ✅ Done     | `notebooks/task2_eda.ipynb` + insights     |
+| 3    | Event Impact Modeling (association matrix)       | In Progress| `notebooks/task3_impact_modeling.ipynb`    |
+| 4    | Forecasting Access & Usage 2025–2027             | —          | —                                          |
+| 5    | Interactive Streamlit Dashboard                  | —          | `dashboard/app.py`                         |
 
-## Repository Structure
+**Unit Tests** — 100% pass (data loading, forecasting, pivot handling)  
+**CI/CD** — GitHub Actions workflow (`unittests.yml`) running on push/PR
+
+## 🛠️ Project Structure
+
 ethiopia-financial-inclusion-forecast/
 ├── .github/workflows/         # CI: unittests.yml
 ├── data/
-│   ├── raw/                   # Starter data (.xlsx → .csv)
-│   └── processed/             # Enriched CSV
+│   ├── raw/                   # Starter .xlsx + converted .csv
+│   └── processed/             # Enriched CSV (Task 1)
 ├── notebooks/
-│   ├── task1_enrichment.ipynb      # Task 1: Load, explore, enrich
-│   ├── task2_eda.ipynb             # Task 2: Visualizations & insights
-│   └── task3_impact_modeling.ipynb # Task 3: Event impact matrix
+│   ├── task1_enrichment.ipynb      # Load, explore, enrich
+│   ├── task2_eda.ipynb             # Visuals, gaps, insights
+│   └── task3_impact_modeling.ipynb # Event matrix (WIP)
 ├── reports/
-│   ├── figures/               # Plots (trajectories, heatmaps, etc.)
+│   ├── figures/               # All plots (trajectories, heatmaps, etc.)
 │   └── key_insights.md        # 6+ documented insights
-├── tests/                     # Unit tests (pytest)
+├── tests/                     # Pytest files
 │   ├── test_data_loading.py
 │   └── test_forecasting.py
-├── dashboard/                 # Task 5: Streamlit app (in progress)
-├── src/                       # Future reusable modules
+├── dashboard/                 # Streamlit app (upcoming)
+├── src/                       # Reusable code (future)
 ├── requirements.txt
 ├── README.md
 └── data_enrichment_log.md
-text## Setup Instructions
+text## ⚡ Quick Start
 
 1. Clone the repo:
    ```bash
    git clone https://github.com/bekonad/ethiopia-financial-inclusion-forecast.git
    cd ethiopia-financial-inclusion-forecast
 
-Create & activate virtual environment (Windows/PowerShell):PowerShellpython -m venv .venv
+Create & activate virtual environment (Windows):PowerShellpython -m venv .venv
 .\.venv\Scripts\Activate.ps1
 Install dependencies:PowerShellpython -m pip install --upgrade pip
 pip install -r requirements.txt
-Run notebooks:PowerShelljupyter notebook notebooks/
-Run dashboard (when ready):PowerShellstreamlit run dashboard/app.py
+Explore notebooks:PowerShelljupyter notebook notebooks/
 Run unit tests:PowerShellpytest -v
+Run dashboard (when ready):PowerShellstreamlit run dashboard/app.py
 
-Current Progress (as of 31 Jan 2026)
+📊 Key Insights (from Task 2 EDA)
 
- Task 1: Data loading, exploration, enrichment (Findex 2025, NDPS Dec 2025, IPS launch) → PR #1
- Task 2: EDA notebook (trends, gaps, event timeline, correlations, 6 insights) → PR #2
- Task 3: Event impact modeling (matrix, magnitude/lag)
- Task 4: Forecasting 2025–2027 (baseline, optimistic/pessimistic scenarios)
- Task 5: Interactive Streamlit dashboard
- Unit tests (data loading + forecasting)
- GitHub Actions CI (unittests.yml)
+Growth slowdown — Account ownership +3pp only 2021–2024 despite mobile money surge
+Gender gap persists — Women 42% vs Men 57% in 2024 (~15pp unchanged)
+Active usage low — Mobile money registered ~19.4%, but active ~15% (big gap)
+Digital payments lag — Only 21% adoption (P2P dominant, merchant acceptance weak)
+Infrastructure leads — Mobile connections 68.4% & internet 21.7% correlate with access
+Policy momentum — NDPS 2026-2030 & IPS launch (Dec 2025) expected to drive high usage boost
 
-Key Insights (from Task 2)
+Full details → reports/key_insights.md
+🛠️ Tools & Tech Stack
 
-Slowdown in access — +3pp only 2021–2024 despite mobile money growth
-Persistent gender gap — ~15pp (women 42% vs men 57% in 2024)
-Mobile money vs active usage — Registered up to ~19.4%, but active remains low (~15%)
-Digital payments lag — Only 21% adoption in 2024 (P2P dominant)
-Infrastructure leads — Mobile 68.4% & internet 21.7% in late 2025 correlate with access
-Policy events matter — NDPS/IPS (Dec 2025) expected to drive high usage impact
+Python 3.10+
+Data: Pandas, NumPy
+Visualization: Matplotlib, Seaborn, Plotly
+Modeling: Statsmodels (trend regression)
+Dashboard: Streamlit
+Testing: pytest
+CI/CD: GitHub Actions
 
-Full details: reports/key_insights.md
-License
+📄 License
 MIT License (unless otherwise specified by 10 Academy)
-
 Last updated: January 31, 2026
