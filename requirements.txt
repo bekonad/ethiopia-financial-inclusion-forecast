@@ -1,0 +1,11 @@
+pandas
+numpy
+matplotlib
+seaborn
+statsmodels
+streamlit
+plotly
+scikit-learn
+pytest
+pytest-cov
+openpyxl          # useful for reading .xlsx files directly
