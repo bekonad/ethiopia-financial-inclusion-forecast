@@ -1,10 +1,10 @@
 <div align="center">
 
-  <h1>📈 Ethiopia Financial Inclusion Forecasting</h1>
+  <h1>Ethiopia Financial Inclusion Forecasting</h1>
 
   <p>
-    <strong>My Week 10 Challenge Project – 10 Academy AI Mastery</strong><br>
-    Forecasting Ethiopia's Digital Financial Transformation using Time Series Methods
+    <strong>10 Academy – Artificial Intelligence Mastery</strong><br>
+    Week 10 Challenge • Forecasting Ethiopia's Digital Financial Transformation
   </p>
 
   <p>
@@ -15,25 +15,44 @@
     <img src="https://img.shields.io/badge/Status-Interim%20Complete-green" alt="Status" />
   </p>
 
-  <p><strong>Author:</strong> Bereket Feleke</p>
-  <p><strong>Location:</strong> Addis Ababa, Ethiopia</p>
-  <p><strong>Challenge Dates:</strong> 28 Jan 2026 – 03 Feb 2026</p>
+  <p>
+    Challenge Period: 28 January 2026 – 03 February 2026<br>
+    Location: Addis Ababa, Ethiopia
+    Author: Bereket Feleke
+  </p>
 
 </div>
 
-## 🎯 Project Overview – Why I Built This
+## Table of Contents
 
-I am a Data Scientist participating in the **10 Academy Week 10 Challenge**.  
-I built this forecasting system to answer real questions from a consortium (development finance institutions, mobile money operators, **National Bank of Ethiopia**):
+- [Table of Contents](#table-of-contents)
+- [Challenge Overview](#challenge-overview)
+- [Historical Trajectory](#historical-trajectory)
+- [Project Deliverables \& Status](#project-deliverables--status)
+- [Repository Structure](#repository-structure)
 
-- What drives financial inclusion in Ethiopia?
-- How do major events (product launches like Telebirr/M-Pesa, policies like NDPS, infrastructure investments) impact access and usage?
-- How did rates change in 2025, and what will 2026–2027 look like?
+## Challenge Overview
 
-Despite rapid growth (Telebirr >54M users since 2021, M-Pesa >10M since 2023, P2P transfers surpassing ATM withdrawals), the **2024 Global Findex** shows only **49%** account ownership (+3pp since 2021) — progress is slowing.  
-My goal: build a reproducible system to forecast **Access** (account ownership) and **Usage** (digital payments) for 2025–2027.
+This repository presents a complete solution for the Week 10 Challenge:  
+**Forecasting Financial Inclusion in Ethiopia** using time series methods.
 
-## 📊 Ethiopia's Historical Trajectory (Global Findex)
+Ethiopia is undergoing rapid digital financial transformation:
+- Telebirr has exceeded 54 million users since its 2021 launch
+- M-Pesa Ethiopia has surpassed 10 million users since 2023
+- Interoperable P2P digital transfers now exceed ATM cash withdrawals
+
+Despite these advancements, the **2024 Global Findex** indicates that only **49%** of adults (aged 15+) possess a financial account — an increase of merely **3 percentage points** since 2021.
+
+The consortium (development finance institutions, mobile money operators, National Bank of Ethiopia) requires answers to the following:
+- What factors drive financial inclusion in Ethiopia?
+- How do events (product launches, policy changes, infrastructure investments) influence outcomes?
+- What were the changes in 2025, and what are the projected trends for 2026–2027?
+
+**Core indicators** are defined according to the **World Bank Global Findex** framework:
+1. **Access** — Account Ownership Rate (% of adults with a bank or mobile money account)
+2. **Usage** — Digital Payment Adoption Rate (% of adults making or receiving digital payments)
+
+## Historical Trajectory
 
 | Year  | Account Ownership | Change   | Notes                          |
 |-------|-------------------|----------|--------------------------------|
@@ -43,79 +62,81 @@ My goal: build a reproducible system to forecast **Access** (account ownership) 
 | 2021  | 46%               | +11pp    | Telebirr launch impact         |
 | 2024  | 49%               | +3pp     | Noticeable slowdown            |
 
-**2024 Usage highlights**:
+**2024 Usage indicators**:
 - Mobile money account ownership: **9.45%**
-- Digital payments (made/received): **~21–35%**
+- Made/received digital payment: **~21–35%**
 - Wages received via account: **~15%**
 
-## 🛠️ What I Delivered in This Repo
+## Project Deliverables & Status
 
-| Task | What I Did                                       | Status     | Notebook / Output                          |
+| Task | Description                                      | Status     | Deliverable / Notebook                     |
 |------|--------------------------------------------------|------------|--------------------------------------------|
-| 1    | Loaded, explored & enriched data (Findex 2025, NDPS/IPS 2025, penetration metrics) | ✅ Done     | `task1_enrichment.ipynb` + enriched CSV    |
-| 2    | EDA: trends, gender gaps, event timeline, correlations, 6 key insights | ✅ Done     | `task2_eda.ipynb` + figures + insights.md  |
-| 3    | Event impact modeling (association matrix, magnitude/lag) | In Progress| `task3_impact_modeling.ipynb`              |
-| 4    | Forecasting Access & Usage 2025–2027 (baseline + scenarios) | —          | —                                          |
-| 5    | Interactive Streamlit dashboard                  | —          | `dashboard/app.py` (planned)               |
+| 1    | Data exploration & enrichment                    | Complete   | `notebooks/task1_enrichment.ipynb`         |
+| 2    | Exploratory Data Analysis (trends, gaps, correlations) | Complete   | `notebooks/task2_eda.ipynb`                |
+| 3    | Event Impact Modeling (association matrix)       | In Progress| `notebooks/task3_impact_modeling.ipynb`    |
+| 4    | Forecasting Access & Usage 2025–2027             | Planned    | —                                          |
+| 5    | Interactive Streamlit Dashboard                  | Planned    | `dashboard/app.py`                         |
 
-**Unit Tests** → 11/11 passing (data loading, forecasting, pivot handling)  
-**CI** → GitHub Actions auto-runs tests on push/PR
+**Unit Tests** — 11 tests passing  
+**Continuous Integration** — GitHub Actions workflow (`unittests.yml`) executes pytest on push/PR
 
-## 📁 Repository Structure
+## Repository Structure
+
+```text
 ethiopia-financial-inclusion-forecast/
-├── .github/workflows/         # CI: unittests.yml
+├── .github/
+│   └── workflows/
+│       └── unittests.yml                # Continuous integration pipeline
 ├── data/
-│   ├── raw/                   # Starter .xlsx + converted .csv
-│   └── processed/             # My enriched CSV
+│   ├── raw/                             # Original .xlsx files + converted .csv
+│   └── processed/                       # Enriched dataset (Task 1 output)
 ├── notebooks/
-│   ├── task1_enrichment.ipynb      # Data prep & 2025 enrichment
-│   ├── task2_eda.ipynb             # Visuals & insights
-│   └── task3_impact_modeling.ipynb # Event matrix (in progress)
+│   ├── task1_enrichment.ipynb           # Data loading, exploration, enrichment
+│   ├── task2_eda.ipynb                  # Visualizations, trends, gaps, insights
+│   └── task3_impact_modeling.ipynb      # Event impact association matrix
 ├── reports/
-│   ├── figures/               # Plots (trajectories, heatmaps, timeline)
-│   └── key_insights.md        # My 6 documented insights
-├── tests/                     # Pytest files
-│   ├── test_data_loading.py
-│   └── test_forecasting.py
-├── dashboard/                 # Streamlit app (coming soon)
-├── src/                       # Reusable code (future)
-├── requirements.txt
-├── README.md                  # This file
-└── data_enrichment_log.md     # My enrichment notes
-text## ⚡ How to Run My Project
+│   ├── figures/                         # Generated plots (trajectories, heatmaps, timelines)
+│   └── key_insights.md                  # Documented insights from EDA
+├── tests/
+│   ├── test_data_loading.py             # Tests for data loading & schema validation
+│   └── test_forecasting.py              # Tests for modeling & aggregation logic
+├── dashboard/                           # Streamlit application (planned)
+├── src/                                 # Reusable modules (future)
+├── requirements.txt                     # Project dependencies
+├── README.md                            # This document
+└── data_enrichment_log.md               # Record of data additions & sources
 
-1. Clone my repo:
-   ```bash
-   git clone https://github.com/bekonad/ethiopia-financial-inclusion-forecast.git
-   cd ethiopia-financial-inclusion-forecast
+Setup & Execution Instructions
 
-Create & activate virtual environment (Windows):PowerShellpython -m venv .venv
+Clone the repositoryBashgit clone https://github.com/bekonad/ethiopia-financial-inclusion-forecast.git
+cd ethiopia-financial-inclusion-forecast
+Create and activate virtual environment (Windows/PowerShell)PowerShellpython -m venv .venv
 .\.venv\Scripts\Activate.ps1
-Install dependencies:PowerShellpython -m pip install --upgrade pip
+Install dependenciesPowerShellpython -m pip install --upgrade pip
 pip install -r requirements.txt
-Explore my notebooks:PowerShelljupyter notebook notebooks/
-Run unit tests:PowerShellpytest -v
-(Future) Launch dashboard:PowerShellstreamlit run dashboard/app.py
+Launch Jupyter notebooksPowerShelljupyter notebook notebooks/
+Execute unit testsPowerShellpytest -v
+(Future) Launch dashboardPowerShellstreamlit run dashboard/app.py
 
-📌 My Key Insights (from Task 2 EDA)
+Key Insights from Exploratory Analysis (Task 2)
 
-Growth is slowing — Account ownership only +3pp (2021–2024) despite mobile money surge
-Gender gap remains stubborn — Women 42% vs Men 57% in 2024 (~15pp gap unchanged)
-Active usage is the bottleneck — Mobile money registered ~19.4%, but active ~15%
-Digital payments lag behind access — Only 21% adoption (P2P dominant, merchant weak)
-Infrastructure is a leading driver — Mobile connections 68.4% & internet 21.7% correlate strongly
-Recent policies matter — NDPS 2026-2030 & IPS/Ethiopay (Dec 2025) expected to drive high usage boost
+Growth slowdown — account ownership increased only +3 percentage points (2021–2024) despite mobile money expansion
+Persistent gender gap — women at 42% vs men at 57% in 2024 (~15pp gap unchanged)
+Active usage bottleneck — mobile money registered ~19.4%, but active usage remains ~15%
+Digital payments lag — only 21% adoption (P2P dominant, merchant acceptance limited)
+Infrastructure as driver — mobile connections at 68.4% and internet at 21.7% correlate strongly with access
+Policy potential — NDPS 2026-2030 and IPS/Ethiopay launches (December 2025) expected to accelerate usage
 
-Full details → reports/key_insights.md
-🛠️ Tech Stack I Used
+Full documentation → reports/key_insights.md
+Technology Stack
 
 Language: Python 3.10+
-Core: Pandas, NumPy
+Data processing: Pandas, NumPy
 Visualization: Matplotlib, Seaborn, Plotly
 Modeling: Statsmodels
-Dashboard: Streamlit (in progress)
-Testing: pytest + GitHub Actions CI
+Dashboard: Streamlit (planned)
+Testing & CI: pytest + GitHub Actions
 
-📄 License
-MIT License (unless restricted by 10 Academy rules)
-Last updated: January 31, 2026
+License
+MIT License (unless otherwise specified by 10 Academy)
+Last updated: 31 January 2026
