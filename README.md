@@ -108,6 +108,8 @@ ethiopia-financial-inclusion-forecast/
 ├── requirements.txt                     # Project dependencies
 ├── README.md                            # This document
 └── data_enrichment_log.md               # Record of data additions & sources
+
+```
 Setup & Execution Instructions ⚙️
 
 Clone the repositoryBashgit clone https://github.com/bekonad/ethiopia-financial-inclusion-forecast.git
