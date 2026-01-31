@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>Ethiopia Financial Inclusion Forecasting</h1>
+  <h1>📊 Ethiopia Financial Inclusion Forecasting</h1>
 
   <p>
     <strong>10 Academy – Artificial Intelligence Mastery</strong><br>
@@ -25,34 +25,37 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Challenge Overview](#challenge-overview)
-- [Historical Trajectory](#historical-trajectory)
-- [Project Deliverables \& Status](#project-deliverables--status)
-- [Repository Structure](#repository-structure)
+- [Challenge Overview](#challenge-overview) 📋
+- [Historical Trajectory](#historical-trajectory) 📈
+- [Project Deliverables & Status](#project-deliverables--status) ✅
+- [Repository Structure](#repository-structure) 📁
+- [Setup & Execution Instructions](#setup--execution-instructions) ⚙️
+- [Key Insights from Exploratory Analysis](#key-insights-from-exploratory-analysis) 🔍
+- [Technology Stack](#technology-stack) 🛠️
+- [License](#license) 📜
 
-## Challenge Overview
+## Challenge Overview 📋
 
-This repository presents a complete solution for the Week 10 Challenge:  
+This repository contains the solution for the Week 10 Challenge:  
 **Forecasting Financial Inclusion in Ethiopia** using time series methods.
 
 Ethiopia is undergoing rapid digital financial transformation:
-- Telebirr has exceeded 54 million users since its 2021 launch
-- M-Pesa Ethiopia has surpassed 10 million users since 2023
-- Interoperable P2P digital transfers now exceed ATM cash withdrawals
+- Telebirr: >54 million users since 2021 launch 🚀
+- M-Pesa Ethiopia: >10 million users since 2023 📱
+- Interoperable P2P digital transfers now surpass ATM cash withdrawals 🔄
 
-Despite these advancements, the **2024 Global Findex** indicates that only **49%** of adults (aged 15+) possess a financial account — an increase of merely **3 percentage points** since 2021.
+Despite these advancements, the **2024 Global Findex** reports only **49%** of adults (aged 15+) have a financial account — an increase of **+3 percentage points** since 2021.
 
-The consortium (development finance institutions, mobile money operators, National Bank of Ethiopia) requires answers to the following:
-- What factors drive financial inclusion in Ethiopia?
-- How do events (product launches, policy changes, infrastructure investments) influence outcomes?
-- What were the changes in 2025, and what are the projected trends for 2026–2027?
+The consortium (development finance institutions, mobile money operators, National Bank of Ethiopia) requires a forecasting system to address:
+- Drivers of financial inclusion in Ethiopia
+- Impact of events (product launches, policy changes, infrastructure investments) on outcomes
+- Changes in 2025 and projections for 2026–2027
 
-**Core indicators** are defined according to the **World Bank Global Findex** framework:
-1. **Access** — Account Ownership Rate (% of adults with a bank or mobile money account)
-2. **Usage** — Digital Payment Adoption Rate (% of adults making or receiving digital payments)
+**Core indicators** (World Bank Global Findex definitions):
+1. **Access** — Account Ownership Rate (% adults with bank or mobile money account)
+2. **Usage** — Digital Payment Adoption Rate (% adults making/receiving digital payments)
 
-## Historical Trajectory
+## Historical Trajectory 📈
 
 | Year  | Account Ownership | Change   | Notes                          |
 |-------|-------------------|----------|--------------------------------|
@@ -63,13 +66,13 @@ The consortium (development finance institutions, mobile money operators, Nation
 | 2024  | 49%               | +3pp     | Noticeable slowdown            |
 
 **2024 Usage indicators**:
-- Mobile money account ownership: **9.45%**
-- Made/received digital payment: **~21–35%**
-- Wages received via account: **~15%**
+- Mobile money account ownership: **9.45%** 📱
+- Made/received digital payment: **~21–35%** 💳
+- Wages received via account: **~15%** 💼
 
-## Project Deliverables & Status
+## Project Deliverables & Status ✅
 
-| Task | Description                                      | Status     | Deliverable / Notebook                     |
+| Task | Description                                      | Status     | Notebook / Output                          |
 |------|--------------------------------------------------|------------|--------------------------------------------|
 | 1    | Data exploration & enrichment                    | Complete   | `notebooks/task1_enrichment.ipynb`         |
 | 2    | Exploratory Data Analysis (trends, gaps, correlations) | Complete   | `notebooks/task2_eda.ipynb`                |
@@ -80,7 +83,7 @@ The consortium (development finance institutions, mobile money operators, Nation
 **Unit Tests** — 11 tests passing  
 **Continuous Integration** — GitHub Actions workflow (`unittests.yml`) executes pytest on push/PR
 
-## Repository Structure
+## Repository Structure 📁
 
 ```text
 ethiopia-financial-inclusion-forecast/
@@ -105,8 +108,7 @@ ethiopia-financial-inclusion-forecast/
 ├── requirements.txt                     # Project dependencies
 ├── README.md                            # This document
 └── data_enrichment_log.md               # Record of data additions & sources
-
-Setup & Execution Instructions
+Setup & Execution Instructions ⚙️
 
 Clone the repositoryBashgit clone https://github.com/bekonad/ethiopia-financial-inclusion-forecast.git
 cd ethiopia-financial-inclusion-forecast
@@ -118,17 +120,17 @@ Launch Jupyter notebooksPowerShelljupyter notebook notebooks/
 Execute unit testsPowerShellpytest -v
 (Future) Launch dashboardPowerShellstreamlit run dashboard/app.py
 
-Key Insights from Exploratory Analysis (Task 2)
+Key Insights from Exploratory Analysis (Task 2) 🔍
 
 Growth slowdown — account ownership increased only +3 percentage points (2021–2024) despite mobile money expansion
-Persistent gender gap — women at 42% vs men at 57% in 2024 (~15pp gap unchanged)
+Persistent gender gap — women at 42% vs men at 57% in 2024 (~15 percentage point gap unchanged)
 Active usage bottleneck — mobile money registered ~19.4%, but active usage remains ~15%
 Digital payments lag — only 21% adoption (P2P dominant, merchant acceptance limited)
 Infrastructure as driver — mobile connections at 68.4% and internet at 21.7% correlate strongly with access
 Policy potential — NDPS 2026-2030 and IPS/Ethiopay launches (December 2025) expected to accelerate usage
 
 Full documentation → reports/key_insights.md
-Technology Stack
+Technology Stack 🛠️
 
 Language: Python 3.10+
 Data processing: Pandas, NumPy
@@ -137,6 +139,6 @@ Modeling: Statsmodels
 Dashboard: Streamlit (planned)
 Testing & CI: pytest + GitHub Actions
 
-License
+License 📜
 MIT License (unless otherwise specified by 10 Academy)
 Last updated: 31 January 2026
