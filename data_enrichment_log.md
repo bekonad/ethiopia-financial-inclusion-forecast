@@ -28,3 +28,33 @@ notes: Added 2025 Findex data points, NDPS & IPS events, impact_links
 why_useful: Enables realistic 2025–2027 forecasting and event-impact modeling
 
 
+
+### 2026-02-02 00:33 EAT – Enrichment Update
+collected_by: Dororo
+collection_date: 2026-02-01
+source_url: https://www.worldbank.org/en/publication/globalfindex
+confidence: high / medium
+notes: Added 2025 Findex data points, NDPS & IPS events, impact_links
+why_useful: Enables realistic 2025–2027 forecasting and event-impact modeling
+
+
+
+### 2026-02-02 00:37 EAT – Enrichment Update
+collected_by: Dororo
+collection_date: 2026-02-01
+source_url: https://www.worldbank.org/en/publication/globalfindex
+confidence: high / medium
+notes: Added 2025 Findex confirmations (49% access, gender splits, 21% digital pay), NDPS & IPS events, impact_links
+why_useful: Enables realistic 2025–2027 forecasting and event-impact modeling
+
+
+
+### 2026-02-02 00:37 EAT – Enrichment Update
+collected_by: 
+collection_date: 2026-02-01
+source_url: https://www.worldbank.org/en/publication/globalfindex
+confidence: high / medium
+notes: Added 2025 Findex confirmations (49% access, gender splits, 21% digital pay), NDPS & IPS events, impact_links
+why_useful: Enables realistic 2025–2027 forecasting and event-impact modeling
+
+
