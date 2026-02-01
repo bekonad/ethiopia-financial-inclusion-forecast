@@ -42,15 +42,6 @@ EVT_0007,event,partnership,,M-Pesa EthSwitch Integration,EVT_MPESA_INTEROP,,,Lau
 EVT_0008,event,infrastructure,,EthioPay Instant Payment System Launch,EVT_ETHIOPAY,,,Launched,categorical,,2025-12-18,,,FY2025/26,all,national,,NBE/EthSwitch,regulator,,high,,,,,,,,Example_Trainee,2025-01-20,,National real-time payment system,,
 EVT_0009,event,policy,,NFIS-II Strategy Launch,EVT_NFIS2,,,Launched,categorical,,2021-09-01,2021-09-01,2025-06-30,2021,all,national,,NBE,regulator,https://nbe.gov.et/,high,,,,,,,,Example_Trainee,2025-01-20,,5-year national financial inclusion strategy,,
 EVT_0010,event,pricing,,Safaricom Ethiopia Price Increase,EVT_SAFCOM_PRICE,,,Implemented,categorical,,2025-12-15,,,2025,all,national,,News,news,,high,,,,,,,,Example_Trainee,2025-01-20,,Data and voice prices increased 20-82%,,
-REC_ENR_001,observation,,ACCESS,Account Ownership Rate,ACC_OWNERSHIP,,49.0,,,,2024-12-31,,,,all,national,,Global Findex 2025,survey,https://www.worldbank.org/en/publication/globalfindex,high,,,,,,,,,,,,Confirmed 49% in 2024 (slow +3pp from 2021),
-REC_ENR_002,observation,,ACCESS,Account Ownership (Men),ACC_OWN_MALE,,57.0,,,,2024-12-31,,,,male,national,,Global Findex 2025,,,high,,,,,,,,,,,,,
-REC_ENR_003,observation,,ACCESS,Account Ownership (Women),ACC_OWN_FEMALE,,42.0,,,,2024-12-31,,,,female,national,,Global Findex 2025,,,high,,,,,,,,,,,,~15pp gender gap,
-REC_ENR_004,observation,,ACCESS,Mobile Money Account Rate,ACC_MM_ACCOUNT,,19.4,,,,2025-01-01,,,,,,,Findex 2025 / NBE,,,medium,,,,,,,,,,,,Growth from 9.45%,
-REC_ENR_005,observation,,USAGE,Digital Payment Adoption Rate,USG_DIG_PAY,,21.0,,,,2024-12-31,,,,,,,Global Findex 2025,,,high,,,,,,,,,,,,Made/received digital payment,
-REC_ENR_006,observation,,ACCESS,Mobile Connections Penetration,ACC_MOBILE_PEN,,68.4,,,,2025-12-31,,,,,,,DataReportal Digital 2026,,,high,,,,,,,,,,,,93.2M connections,
-REC_ENR_007,observation,,ACCESS,Internet Penetration,ACC_INTERNET_PEN,,21.7,,,,2025-12-31,,,,,,,DataReportal Digital 2026,,,high,,,,,,,,,,,,,
-EVT_ENR_001,event,policy,,National Digital Payments Strategy (NDPS) 2026-2030 Launch,,,,,,,2025-12-08,,,,,,,National Bank of Ethiopia,,https://nbe.gov.et/wp-content/uploads/2025/12/Ethiopia_NDPS_Draft_F.pdf,high,,,,,,,,,,,,"Launched Dec 8, 2025; targets 60% active accounts, narrow gender gap <3pp, boost digital tx",
-EVT_ENR_002,event,infrastructure,,Instant Payment System (IPS / Ethiopay) Launch,,,,,,,2025-12-09,,,,,,,NBE / EthSwitch,,,high,,,,,,,,,,,,"Real-time payments launched Dec 9, 2025",
-IMP_ENR_001,impact_link,,USAGE,,,,,,,,,,,,,,,,,,,USG_DIG_PAY,,increase,high,,12.0,policy,,,,,"NDPS targets high usage growth (active accounts, tx volume)",EVT_ENR_001
-IMP_ENR_002,impact_link,,ACCESS,,,,,,,,,,,,,,,,,,,ACC_OWNERSHIP,,increase,medium,,24.0,,,,,,Supports overall inclusion via interoperability & trust,EVT_ENR_001
-IMP_ENR_003,impact_link,,USAGE,,,,,,,,,,,,,,,,,,,USG_P2P_COUNT,,increase,medium,,6.0,,,,,,Real-time IPS boosts P2P and digital transaction volume,EVT_ENR_002
+REC_ENR_001,observation,,ACCESS,,ACC_OWNERSHIP,,49.0,,,,2024-12-31,,,,,,,Global Findex 2025,,,high,,,,,,,,,,,,Confirmed 49%,
+EVT_ENR_001,event,policy,,National Digital Payments Strategy 2026-2030 Launch,,,,,,,2025-12-08,,,,,,,NBE,,,high,,,,,,,,,,,,,
+IMP_ENR_001,impact_link,,USAGE,,,,,,,,,,,,,,,,,,,USG_DIG_PAY,,increase,high,,12.0,,,,,,High usage boost expected,EVT_ENR_001
