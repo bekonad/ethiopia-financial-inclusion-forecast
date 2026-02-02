@@ -1,0 +1,3 @@
+parent_id,event_name,category,observation_date,ACC_OWNERSHIP,USG_DIG_PAY,USG_P2P_COUNT
+EVT_ENR_001,National Digital Payments Strategy (NDPS) 2026-2030 Launch,policy,2025-12-08,2.0,3.0,0.0
+EVT_ENR_002,Instant Payment System (IPS / Ethiopay) Launch,infrastructure,2025-12-09,0.0,0.0,2.0
