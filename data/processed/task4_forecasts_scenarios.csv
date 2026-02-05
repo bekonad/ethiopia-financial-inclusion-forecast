@@ -1,0 +1,19 @@
+year,scenario,forecast,lower_90,upper_90,method,indicator
+2025,Baseline,55.44,45.41,65.47,linear OLS + events + 90% PI,Access
+2026,Baseline,59.75,48.94,70.56,linear OLS + events + 90% PI,Access
+2027,Baseline,64.16,52.54,75.77,linear OLS + events + 90% PI,Access
+2025,Optimistic,57.36,46.98,67.74,linear OLS + events + 90% PI,Access
+2026,Optimistic,64.23,52.6,75.85,linear OLS + events + 90% PI,Access
+2027,Optimistic,71.36,58.44,84.27,linear OLS + events + 90% PI,Access
+2025,Pessimistic,55.92,45.8,66.04,linear OLS + events + 90% PI,Access
+2026,Pessimistic,60.87,49.85,71.88,linear OLS + events + 90% PI,Access
+2027,Pessimistic,65.96,54.02,77.89,linear OLS + events + 90% PI,Access
+2025,Baseline,22.8,19.72,25.88,constant + events (sparse),Usage
+2026,Baseline,25.2,21.8,28.6,constant + events (sparse),Usage
+2027,Baseline,28.5,24.65,32.35,constant + events (sparse),Usage
+2025,Optimistic,25.68,22.21,29.15,constant + events (sparse),Usage
+2026,Optimistic,31.92,27.61,36.23,constant + events (sparse),Usage
+2027,Optimistic,40.5,35.03,45.97,constant + events (sparse),Usage
+2025,Pessimistic,23.52,20.34,26.7,constant + events (sparse),Usage
+2026,Pessimistic,26.88,23.25,30.51,constant + events (sparse),Usage
+2027,Pessimistic,31.5,27.25,35.75,constant + events (sparse),Usage
